@@ -65,6 +65,14 @@ function pickOption(params) {
     const inGame = document.getElementById("inGame");
     const result = document.getElementById("result");
 
-    inGame.textContent = `${start.playerOption} VS ${start.botOption}`;
-    result.textContent = start.matchResult();
+
+    inGame.textContent = "..."
+    result.textContent = "..."
+
+    setTimeout(() => {
+        inGame.textContent = `${start.playerOption} VS ${start.botOption}`;
+        result.textContent = start.matchResult();
+    }, 1500);
+
+
 }
